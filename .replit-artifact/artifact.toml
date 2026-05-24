@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "CoreShield IoT Dashboard"
+version = "1.0.0"
+id = "artifacts/coreshield"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24227
+
+[services.development]
+run = "pnpm --filter @workspace/coreshield run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/coreshield", "run", "build" ]
+publicDir = "artifacts/coreshield/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24227"
+BASE_PATH = "/"

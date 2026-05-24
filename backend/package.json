@@ -1,0 +1,12 @@
+{
+  "name": "coreshield-backend",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "latest",
+    "elysia": "latest"
+  }
+}
