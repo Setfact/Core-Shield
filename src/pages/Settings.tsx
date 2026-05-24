@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { useSensorData } from "@/store/useSensorData";
 import { Save, BellRing } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { TelegramSettings } from "@/components/TelegramSettings";
+
 import { ref, get, set } from "firebase/database";
 import { db } from "@/lib/firebase";
 
@@ -137,7 +137,6 @@ export default function Settings() {
         </div>
       </Card>
 
-      <TelegramSettings />
 
 
     </div>

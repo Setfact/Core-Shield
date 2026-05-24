@@ -70,7 +70,7 @@ sudo docker-compose logs -f
 ## Langkah 6: Akses Aplikasi via Browser Web
 
 Aplikasi Anda kini sudah mengudara secara live dan dapat diakses dari internet menggunakan IP Publik (Public IP) dari server Anda:
-- **Frontend Panel/Dashboard**: Kunjungi URL `http://ip_address_server` (Browser akan otomatis membaca port 80).
+- **Frontend Panel/Dashboard**: Kunjungi URL `http://ip_address_server:3000`.
 - **Backend API**: Kunjungi URL `http://ip_address_server:8080`.
 
 ## Langkah Tambahan: (Opsional) Atur Firewall Server
@@ -78,7 +78,7 @@ Aplikasi Anda kini sudah mengudara secara live dan dapat diakses dari internet m
 Jika Anda tidak bisa membuka web Anda setelah menjalankan docker, kemungkinan port di-blokir oleh sistem *Firewall* OS. Jika menggunakan `UFW` (Ubuntu Firewall), ketik ini:
 
 ```bash
-sudo ufw allow 80/tcp
+sudo ufw allow 3000/tcp
 sudo ufw allow 8080/tcp
 sudo ufw reload
 ```
