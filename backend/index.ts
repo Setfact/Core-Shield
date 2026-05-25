@@ -1,8 +1,8 @@
 import { Elysia } from 'elysia';
 import { cors } from '@elysiajs/cors';
 
-const TELEGRAM_BOT_TOKEN = "8739920580:AAH4U4ygPlOnPnmy_N5h-WwcN5ogwBokOrU";
-const TELEGRAM_CHAT_ID = "1495577270";
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || "";
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || "";
 const FIREBASE_DB_URL = "https://coreshield-6e0d3-default-rtdb.asia-southeast1.firebasedatabase.app";
 
 // Helper for Telegram MarkdownV2 escaping
